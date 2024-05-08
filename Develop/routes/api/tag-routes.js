@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
 {
   res.status(500).json(err);
 }  
+
 });
 
 router.get('/:id', (req, res) => {
@@ -36,6 +37,7 @@ router.get('/:id', (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+
 });
 
 router.post('/', (req, res) => {
@@ -70,11 +72,28 @@ router.put('/:id', (req, res) => {
   } catch (err) {
     return res.status(500).json(err)
   }
-  
+
 });
 
 router.delete('/:id', (req, res) => {
-  // delete on tag by its `id` value
+ // delete on tag by its `id` value
+ try {
+  const tagOut = await Tag.destroy({
+    where:{
+      id:req.params.id,
+    },
+
+  });
+
+  if (!tagOut){
+    res.status(404).json({message:'No tag with that ID...'});
+    return;
+  }
+  return res.status(200).json(tagOut);
+} catch (err) {
+  return res.status(500).json(err);
+}
+
 });
 
 module.exports = router;
