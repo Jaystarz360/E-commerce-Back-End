@@ -21,7 +21,6 @@ THEN I am able to successfully create, update, and delete data in my database
 ## Description
 
 
-
 ## Tests
 Test case seen in the following walkthrough: <br>
 [Video Walkthrough]()
