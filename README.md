@@ -19,7 +19,7 @@ WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
 THEN I am able to successfully create, update, and delete data in my database
 
 ## Description
-
+Build the back end for an e-commerce site following the Object-Relational Mapping (ORM) model. This app will control the Product, Product Tags, Category databases. Products can be be added, updated, and deleted. You can also add and delete categories and product tags as well. Front end code already given. Created a back end program to have Express.js API to use Sequelize to interact with a MySQL database.
 
 ## Tests
 Test case seen in the following walkthrough: <br>
